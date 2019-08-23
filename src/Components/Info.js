@@ -6,6 +6,7 @@ function Info(props) {
     return (
       <div className="info">
         <h3>{props.title}</h3>
+        <p>{props.info}</p>
       </div>
     );
   }

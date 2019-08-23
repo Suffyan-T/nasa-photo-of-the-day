@@ -1,6 +1,10 @@
 .info{
-    height: 80px;
-    width: 100%;
+    max-width:100%;
     background-color: RGB(27, 38, 49, .5);
     color:#ECF0F1;
+    padding: 20px;
+}
+
+p{
+	padding: 20px;
 }

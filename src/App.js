@@ -14,6 +14,7 @@ const [data, setData] = useState({});
   useEffect(() => {
     axios.get('https://api.nasa.gov/planetary/apod?api_key=7yne0ZoBwWkfv7dG0xWcfqDK4BrhowblfXLTvWet')
       .then(returnData => {
+      	console.log(returnData.data);
         setData(returnData.data);
     })
   },[]);
@@ -22,10 +23,10 @@ const [data, setData] = useState({});
     <div className='main-container'>
       <div className="App">
         <Header />
-        <Card img={data.img} alt={data.title}/> 
-        <Info title={data.title}/>
+        <Card img={data.hdurl} alt={data.title}/> 
+        <Info title={data.title} info={data.explanation}/>
       </div>
-    </div>
+     </div>
   );
 }
 
